@@ -1,0 +1,17 @@
+# Rust/Cargo
+/target/
+**/*.rs.bk
+Cargo.lock
+
+# VSCode
+.vscode/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+
+# MISC
+scratch.txt

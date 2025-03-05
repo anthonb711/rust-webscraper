@@ -1,0 +1,1 @@
+/Users/thewiz/BYU-I/2025\ Winter/CSE\ 310\ Applied\ Programing/repos/rust-webScraper/webScraper/target/debug/webScraper: /Users/thewiz/BYU-I/2025\ Winter/CSE\ 310\ Applied\ Programing/repos/rust-webScraper/webScraper/src/main.rs
