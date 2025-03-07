@@ -1,5 +1,7 @@
 # Rust/Cargo
 target/*
+
+webScraper/target/* 
 **/*.rs.bk
 Cargo.lock
 
