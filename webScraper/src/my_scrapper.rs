@@ -1,8 +1,11 @@
 use thirtyfour;
 use std::error::Error;
 use thirtyfour::prelude::*;
-use std::thread;
-use std::time::Duration;
+
+
+// these are for the thread sleep if uncommented below
+//use std::thread;
+//use std::time::Duration;
 
 #[tokio::main]
 pub async fn scrape_url() -> Result<(), Box<dyn Error + Send + Sync>> {
@@ -41,7 +44,7 @@ pub async fn scrape_url() -> Result<(), Box<dyn Error + Send + Sync>> {
     }
     println!("\x1b[1m-----------------------------------------------------------------------------------------------------------------\x1b[0m");
 
-   // uncomment if more time is needed
+   // uncomment imports and line below if more time is needed
    // thread::sleep(Duration::from_secs(2));
     driver.quit().await?;
 
