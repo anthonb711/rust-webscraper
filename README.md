@@ -1,32 +1,22 @@
 # Overview
+This project is a simple webscraper console application, written in Rust. The goal was to be able to reach a predefined URL and then scrape predefined data and display it to the user while getting my toes wet with Rust. This is a minimum viable solution and is just a foundation to be built upon. 
 
-{Important! Do not say in this section that this is college assignment. Talk about what you are trying to accomplish as a software engineer to further your learning.}
 
-{Provide a description of the software that you wrote to demonstrate the Rust language.}
-
-{Describe your purpose for writing this software.}
-
-{Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running and a walkthrough of the code. Focus should be on sharing what you learned about the language syntax.}
 
 [Software Demo Video](http://youtube.link.goes.here)
 
 # Development Environment
+Rust with Cargo as the packet manager for the project. I did utilize the thirtyfour crate and chromedriver for webdriving.
 
-{Describe the tools that you used to develop the software}
-
-{Describe the programming language that you used and any libraries.}
 
 # Useful Websites
 
 {Make a list of websites that you found helpful in this project}
-
-- [Web Site Name](http://url.link.goes.here)
-- [Web Site Name](http://url.link.goes.here)
+- [Rust Offical](https://www.rust-lang.org/)
+- [ThiryFour Documentation](https://vrtgs.github.io/thirtyfour/)
+- [Crates - Rust Library Repo](https://crates.io/)
 
 # Future Work
-
-{Make a list of things that you need to fix, improve, and add in the future.}
-
-- Item 1
-- Item 2
-- Item 3
+- Send the scrappped data to a database 
+- New menu options to pull previously scraped data from the database
+- Make it more generic to pull from different websites.

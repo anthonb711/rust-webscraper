@@ -4,7 +4,6 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-regex = "1.11.1"
-scraper = "0.23.1"
-soup = "0.5.1"
 thirtyfour = "0.35.0"
+tokio = { version = "1", features = ["full"] }
+
