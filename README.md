@@ -3,7 +3,7 @@ This project is a simple webscraper console application, written in Rust. The go
 
 
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/e34WcZLC91M)
 
 # Development Environment
 Rust with Cargo as the packet manager for the project. I did utilize the thirtyfour crate and chromedriver for webdriving.
