@@ -1,5 +1,6 @@
 use std::io::{self, Write};
 mod my_scrapper;
+mod db;
 
 fn main() {
   let mut input = String::new();
@@ -29,7 +30,20 @@ fn main() {
     if user_input.eq_ignore_ascii_case("q"){
       println!("See you next time!\n");
       break;
+    } else if user_input.eq_ignore_ascii_case("g") {
+         match db::get_all_releases() {
+          Ok(release_list) =>{
+            for release in release_list {
+              println!(
+                "*  {} {}\n URL: {}\n", release.title, release.release_date, release.article_url ); 
+              }
+              break;
+            }
+
+            Err(err) => eprintln!("ERROR FETCHING NEW RELEASES: {}", err),
+        }
     }
+    
     println!("\x1b[1m-----------------------------------------------------------------------------------------------------------------\x1b[0m");
     let _ = my_scrapper::scrape_url();
 

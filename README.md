@@ -15,6 +15,7 @@ Rust with Cargo as the packet manager for the project. I did utilize the thirtyf
 - [Rust Offical](https://www.rust-lang.org/)
 - [ThiryFour Documentation](https://vrtgs.github.io/thirtyfour/)
 - [Crates - Rust Library Repo](https://crates.io/)
+- [MySQL Crate Docs](https://docs.rs/mysql/latest/mysql/index.html#queryresult)
 
 # Future Work
 - Send the scrappped data to a database 

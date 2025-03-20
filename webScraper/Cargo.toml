@@ -4,6 +4,8 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+chrono = "0.4.40"
+mysql = "26.0.0"
 thirtyfour = "0.35.0"
 tokio = { version = "1", features = ["full"] }
 
