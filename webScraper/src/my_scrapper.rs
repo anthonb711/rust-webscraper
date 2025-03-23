@@ -1,6 +1,9 @@
 use thirtyfour;
 use std::error::Error;
 use thirtyfour::prelude::*;
+use super::insert;
+use super::utils;
+
 
 
 // these are for the thread sleep if uncommented below
@@ -31,21 +34,28 @@ pub async fn scrape_url() -> Result<(), Box<dyn Error + Send + Sync>> {
     let date_line = release_block.find_all(By::Css(".date-line")).await?;
     
 
-    // format abd the ouput the scraped data for user readability
+    // format the scraped data for user readability
     println!("  Recent News Releases:\n");
     for((h3, href), date_text) in titles.iter().zip(links.iter()).zip(date_line.iter()).take(5){
       let title = h3.text().await?;
       let link = href.attr("href").await?.unwrap_or(" ".to_string());
       let date_line = date_text.find(By::Tag("span")).await?;
       let date = date_line.text().await?;
+      
+      //format the dateline and then archive the new releases. The db schema handles the duplicates.
+      let formatted_date = utils::format_dateline(&date);
+      insert::archive_scrape(&title, &link, &formatted_date);
+
+      // display to the user
       println!("  {}", date);
       // allows for a clickable link for in some terminal applications. 
       println!("\t\x1b]8;;{}\x1b\\🔗 {} \x1b]8;;\x1b\\", link, title);  
     }
-    println!("\x1b[1m-----------------------------------------------------------------------------------------------------------------\x1b[0m");
+
 
    // uncomment imports and line below if more time is needed
    // thread::sleep(Duration::from_secs(2));
+
     driver.quit().await?;
 
     Ok(())
