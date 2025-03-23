@@ -1,12 +1,14 @@
 # Overview
-This project is a simple webscraper console application, written in Rust. The goal was to be able to reach a predefined URL and then scrape predefined data and display it to the user while getting my toes wet with Rust. This is a minimum viable solution and is just a foundation to be built upon. 
+This project is a simple webscraper console application, written in Rust. The goal was to be able to reach a predefined URL and then scrape predefined data and display it to the user while getting my toes wet with Rust. This extends the previous version that was just scraping data and displaying it to the user. The app now archives the scraped data for later use. The user can choose to view the archived data, update, delete, or manually add data to the archive. 
 
 
 
-[Software Demo Video](https://youtu.be/e34WcZLC91M)
+[Software Demo Video](https://youtu.be/AZss8qHDkuw)
 
 # Development Environment
-Rust with Cargo as the packet manager for the project. I did utilize the thirtyfour crate and chromedriver for webdriving.
+- Rust with Cargo as the packet manager for the project. I did utilize the thirtyfour crate and chromedriver for webdriving.
+- mysql crate is now being used extensively.
+- chrono crate is being used for the date type management and formating for the database.
 
 
 # Useful Websites
@@ -18,6 +20,5 @@ Rust with Cargo as the packet manager for the project. I did utilize the thirtyf
 - [MySQL Crate Docs](https://docs.rs/mysql/latest/mysql/index.html#queryresult)
 
 # Future Work
-- Send the scrappped data to a database 
-- New menu options to pull previously scraped data from the database
+- Inable chromedrive to be started as part of the scraper. Currently it has to be running before the scraper is called. 
 - Make it more generic to pull from different websites.
